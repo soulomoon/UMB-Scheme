@@ -789,7 +789,7 @@ Public void SS( label )
 {
 	Integer i;
 	Output( "\n" ); Output( label ); Output( ": " );
-	for ( i = 1; i <= 8 && i <= Arg_Stack_Ptr; i++ );
+	for ( i = 1; i <= 8 && i <= Arg_Stack_Ptr; i++ )
 	{
 		Show_Object( Top(i), 1 ); 
 		if ( i < 8 && i < Arg_Stack_Ptr ) Output( ", " );
