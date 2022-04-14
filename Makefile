@@ -79,6 +79,7 @@ clean:
 install: default
 	mkdir -p ~/Scheme/UMB-Scheme/
 	cp prelude.scheme ~/Scheme/UMB-Scheme/
+	mkdir ~/bin
 	cp scheme ~/bin/
 	
 
