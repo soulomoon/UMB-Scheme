@@ -75,3 +75,8 @@ nonums:
 
 clean:
 		rm -rf *.o a.out scheme
+
+install: 
+	mkdir -p ~/Scheme/UMB-Scheme/
+	cp prelude.scheme ~/Scheme/UMB-Scheme/
+

@@ -63,7 +63,8 @@ Private Boolean File_Exists();
 
 #define TOP_LEVEL_PROMPT "\n==> "
 
-#define STANDARD_PRELUDE_PATHNAME strcat(getenv("$HOME"), "/Scheme/UMB-Scheme/prelude.scheme")
+// #define STANDARD_PRELUDE_PATHNAME strcat(getenv("$HOME"), "/Scheme/UMB-Scheme/prelude.scheme")
+#define STANDARD_PRELUDE_PATHNAME "/Scheme/UMB-Scheme/prelude.scheme"
 
 Private String OPENING  =
 "Welcome to UMB Scheme, version      Copyright (c) 1988,1996 William R Campbell.\n\
@@ -139,7 +140,9 @@ Private void Steering()
 	if ( ! Prelude_Started )
 	{
 		Prelude_Started = TRUE;
-		Load_File(STANDARD_PRELUDE_PATHNAME);
+		char* a = getenv("HOME");
+		strcat(a, STANDARD_PRELUDE_PATHNAME);
+		Load_File(a);
 	}
 	Prelude_Complete = TRUE;
 	

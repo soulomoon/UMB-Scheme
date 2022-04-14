@@ -708,7 +708,7 @@
 ; 
 ; Comment this out if you don't want to use SLIB
 
-(load "SLIB-for-umb-scheme.init")
+; (load "SLIB-for-umb-scheme.init")
 
 ; MAINTENANCE PROCEDURES
 
@@ -731,5 +731,5 @@
 (define (goo n) 
     (if (= n 0) 1 (* 10 (goo (- n 1))) ))
 
-(gc-messages #t)
+(gc-messages #f)
 
